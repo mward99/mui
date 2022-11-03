@@ -1,37 +1,59 @@
-import { Button } from "@mui/material";
-import { Chart } from "react-google-charts";
-
-
-export const data = [
-  ["Task", "Hours per Day"],
-  ["Work", 11],
-  ["Eat", 2],
-  ["Commute", 2],
-  ["Watch TV", 2],
-  ["Sleep", 7], // CSS-style declaration
-];
-
-export const options = {
-  title: "My Daily Activities",
-  pieHole: 0.4,
-  is3D: false,
-};
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Avatar } from "@mui/material";
 
 function App() {
   return (
-    <div>
- <Button variant="text">Text</Button>
-<Button variant="contained">Contained</Button>
-<Button variant="outlined">Outlined</Button>
-<Chart
-      chartType="PieChart"
-      width="100%"
-      height="400px"
-      data={data}
-      options={options}
-    />
+    <Box sx={{ flexGrow: 2 }}>
+      <AppBar style={{ background: "#2E3B55" }}>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
 
-    </div>
+          <Button color="inherit">HOME</Button>
+          <Button color="inherit">BUDGET</Button>
+          <Button color="inherit">PURCHASE</Button>
+          <Button color="inherit">SELL</Button>
+          <Button
+            style={{
+              backgroundColor: "#66FCF1",
+              color: "#000000",
+              position: "fixed",
+              left: "77rem",
+            }}
+            variant="contained"
+          >
+            SIGN UP
+          </Button>
+          <Button
+            style={{
+              backgroundColor: "#66FCF1",
+              color: "#000000",
+              position: "fixed",
+              left: "85rem",
+            }}
+            variant="contained"
+          >
+            LOGIN
+          </Button>
+          <Avatar
+            sx={{ position: "fixed", left: "92rem" }}
+            src="/broken-image.jpg"
+          />
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
 
