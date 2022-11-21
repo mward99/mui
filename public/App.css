@@ -2,7 +2,8 @@
     background-image: linear-gradient(to right, #5d5c62, #C5C6C7);
 }
 body {
-  margin: 0;
+  background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+  
 }
 
 #App {
@@ -11,14 +12,44 @@ body {
   /* Give app full page to work with */
   height: 100vh;
 }
-#SignUp {
-   
-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
-    
+
+h2{
+  position: fixed;
+  left: 3.5rem;
+  top: 100px;
+  color: #482673;
+  border-radius: 8px;
+  width: 500px;
 }
-#Login {
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+#Chart{
+  position:fixed;
+  top:500px;
 }
+
+
+p{
+  position: fixed;
+  left: 3.5rem;
+  top: 150px;
+  border-radius: 8px;
+  width: 500px;
+}
+#Secondheader {
+  position: fixed;
+  left: 3.5rem;
+  top: 350px;
+  border-radius: 8px;
+  width: 500px;
+}
+#Secondp{
+  position: fixed;
+  left: 3.5rem;
+  top: 390px;
+  border-radius: 8px;
+  width: 500px;
+}
+
+
 
 
 #page-wrap {
@@ -43,6 +74,21 @@ box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 .bm-item:hover {
   color: white;
 }
+
+
+
+#AddTransaction {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+
+#StartBudgeting {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+
+#TransactionTable {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+
 
 /* The rest copied directly from react-burger-menu docs */
 
