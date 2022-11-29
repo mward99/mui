@@ -1,6 +1,34 @@
 import { Button, TextField } from "@mui/material";
+import Axios from "axios";
+import React, { useState } from "react";
 
-export default function Signup() {
+function SignUp() {
+  const [User_Username, setUserUsername] = useState("");
+  const [User_Email, setUserEmail] = useState("");
+  const [User_Password, setUserPassword] = useState("");
+  const [User_Zip, setUserZip] = useState(0);
+  const [User_State, setUserState] = useState("");
+  const [User_City, setUserCity] = useState("");
+  const [User_Street_Address, setUserStreetAddress] = useState("");
+
+  const addInfo = () => {
+    Axios.post("http://localhost:4000/signup", {
+      User_Username: User_Username,
+      User_Email: User_Email,
+      User_Password,
+      User_Password,
+      User_Zip,
+      User_Zip,
+      User_State,
+      User_State,
+      User_City,
+      User_City,
+      User_Street_Address: User_Street_Address,
+    }).then(() => {
+      console.log("success");
+    });
+  };
+
   return (
     <div className="App">
       <h2>App Name</h2>
@@ -35,6 +63,9 @@ export default function Signup() {
       <TextField
         id="outlined-textarea"
         label="Enter your email"
+        onChange={(event) => {
+          setUserEmail(event.target.value);
+        }}
         placeholder=""
         multiline
         sx={{
@@ -51,6 +82,9 @@ export default function Signup() {
       <TextField
         id="outlined-textarea"
         label="Enter your username"
+        onChange={(event) => {
+          setUserUsername(event.target.value);
+        }}
         placeholder=""
         multiline
         sx={{
@@ -65,11 +99,14 @@ export default function Signup() {
       <TextField
         id="outlined-textarea"
         label="Create a password"
+        onChange={(event) => {
+          setUserPassword(event.target.value);
+        }}
         placeholder=""
         multiline
         sx={{
           position: "fixed",
-          top: "25.5rem",
+          top: "20.5rem",
           left: "10.5rem",
           borderRadius: "10px",
           backgroundColor: "white",
@@ -80,11 +117,14 @@ export default function Signup() {
       <TextField
         id="outlined-textarea"
         label="Confirm password"
+        onChange={(event) => {
+          setUserPassword(event.target.value);
+        }}
         placeholder=""
         multiline
         sx={{
           position: "fixed",
-          top: "20.5rem",
+          top: "25.5rem",
           left: "10.5rem",
           backgroundColor: "white",
           borderRadius: "10px",
@@ -94,6 +134,9 @@ export default function Signup() {
       <TextField
         id="outlined-textarea"
         label="Enter your address"
+        onChange={(event) => {
+          setUserStreetAddress(event.target.value);
+        }}
         placeholder=""
         multiline
         sx={{
@@ -108,6 +151,9 @@ export default function Signup() {
       <TextField
         id="outlined-textarea"
         label="Enter your City"
+        onChange={(event) => {
+          setUserCity(event.target.value);
+        }}
         placeholder=""
         multiline
         sx={{
@@ -122,6 +168,9 @@ export default function Signup() {
       <TextField
         id="outlined-textarea"
         label="Enter your State"
+        onChange={(event) => {
+          setUserState(event.target.value);
+        }}
         placeholder=""
         multiline
         sx={{
@@ -136,6 +185,9 @@ export default function Signup() {
       <TextField
         id="outlined-textarea"
         label="Enter your Zip Code"
+        onChange={(event) => {
+          setUserZip(event.target.value);
+        }}
         placeholder=""
         multiline
         sx={{
@@ -152,7 +204,7 @@ export default function Signup() {
       <Button
         id="SignUp"
         variant="contained"
-        href="/Home"
+        onClick={addInfo}
         sx={{
           backgroundColor: "#66FCF1",
           color: "black",
@@ -168,3 +220,4 @@ export default function Signup() {
     </div>
   );
 }
+export default SignUp;
