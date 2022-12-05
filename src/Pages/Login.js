@@ -152,7 +152,7 @@ export default function Login() {
           width: "250px",
         }}
       >
-        Submit Post
+        Login
       </Button>
     </div>
   );
