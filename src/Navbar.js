@@ -37,7 +37,7 @@ function Navbar() {
             SELL
           </Button>
           <Button
-            href="/Signup"
+            href="/Account"
             style={{
               backgroundColor: "#66FCF1",
               color: "#000000",

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="App">
       <h2>Bank Shopper</h2>
-      <img src="pic.png"></img>
+      <img src="./Images/pic.png"></img>
       <p>
         The goal of the application is to combine banking and ecommerce into one
         platform for individual sellers and buyers. This application will

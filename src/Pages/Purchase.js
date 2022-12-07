@@ -1,11 +1,16 @@
-import { Button, TextField } from "@mui/material";
 export default function Purchae() {
   return (
     <div className="App">
+      <img src="./Images/pic.png"></img>
+      <h2>Select Brand</h2>
+      <p>
+        You are able to adjust your budget and purchase items on the platform. s
+      </p>
+
       <nav>
         <ul>
           <li>
-            <a href="/Tv's"> Tv's </a>
+            <a href="/Tvs"> Tv's </a>
           </li>
           <li>
             <a href="/Consoles"> Consoles</a>
@@ -39,46 +44,6 @@ export default function Purchae() {
           </li>
         </ul>
       </nav>
-      <TextField
-        id="outlined-textarea"
-        label="Search"
-        placeholder=""
-        multiline
-        sx={{
-          position: "fixed",
-          top: "7.5rem",
-          left: "1.5rem",
-          backgroundColor: "white",
-          borderRadius: "10px",
-          width: "200px",
-        }}
-      />
-      <TextField
-        id="outlined-textarea"
-        label="Select"
-        select
-        multiline
-        sx={{
-          position: "fixed",
-          top: "7.5rem",
-          left: "15.5rem",
-          backgroundColor: "white",
-          borderRadius: "10px",
-          width: "200px",
-        }}
-      />
-      <Button
-        id="StartBudgeting"
-        sx={{
-          position: "fixed",
-          right: "2.5rem",
-          color: "Black",
-          top: "8.5rem",
-          width: "100px",
-        }}
-      >
-        View All
-      </Button>
     </div>
   );
 }
