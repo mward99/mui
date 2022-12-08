@@ -19,7 +19,7 @@ export default function Home() {
       </p>
 
       <Button
-        href="/Home"
+        href="/Account"
         id="StartBudgeting"
         variant="contained"
         sx={{

@@ -52,6 +52,15 @@ export default function Tvs() {
           <td>
             <img id="Tv3" src="./Images/Tv3.jpg"></img>
           </td>
+          <td>
+            <img id="Tv4" src="./Images/Tv4.jpg"></img>
+          </td>
+          <td>
+            <img id="Tv5" src="./Images/Tv5.jpg"></img>
+          </td>
+          <td>
+            <img id="Tv6" src="./Images/Tv6.jpg"></img>
+          </td>
         </tr>
       </table>
       <TextField
@@ -97,7 +106,7 @@ export default function Tvs() {
         View
       </Button>
       <Button
-        href="/Signup"
+        href="/View"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",
@@ -125,7 +134,7 @@ export default function Tvs() {
         View
       </Button>
       <Button
-        href="/Signup"
+        href="/View"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",
@@ -166,12 +175,96 @@ export default function Tvs() {
         Add to Cart
       </Button>
       <Button
-        href="/Signup"
+        href="/View"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",
           position: "fixed",
           left: "20.5rem",
+          bottom: "300px",
+          width: "2%",
+        }}
+        variant="contained"
+      >
+        View
+      </Button>
+      <Button
+        href="/Signup"
+        style={{
+          backgroundColor: "#66FCF1",
+          color: "#000000",
+          position: "fixed",
+          left: "25.5rem",
+          bottom: "20px",
+          width: "10%",
+        }}
+        variant="contained"
+      >
+        Add to Cart
+      </Button>
+      <Button
+        href="/View"
+        style={{
+          backgroundColor: "#66FCF1",
+          color: "#000000",
+          position: "fixed",
+          left: "20.5rem",
+          bottom: "20px",
+          width: "2%",
+        }}
+        variant="contained"
+      >
+        View
+      </Button>
+      <Button
+        href="/Signup"
+        style={{
+          backgroundColor: "#66FCF1",
+          color: "#000000",
+          position: "fixed",
+          left: "45.5rem",
+          bottom: "20px",
+          width: "10%",
+        }}
+        variant="contained"
+      >
+        Add to Cart
+      </Button>
+      <Button
+        href="/View"
+        style={{
+          backgroundColor: "#66FCF1",
+          color: "#000000",
+          position: "fixed",
+          left: "40.5rem",
+          bottom: "20px",
+          width: "2%",
+        }}
+        variant="contained"
+      >
+        View
+      </Button>
+      <Button
+        href="/Signup"
+        style={{
+          backgroundColor: "#66FCF1",
+          color: "#000000",
+          position: "fixed",
+          left: "45.5rem",
+          bottom: "300px",
+          width: "10%",
+        }}
+        variant="contained"
+      >
+        Add to Cart
+      </Button>
+      <Button
+        href="/View"
+        style={{
+          backgroundColor: "#66FCF1",
+          color: "#000000",
+          position: "fixed",
+          left: "40.5rem",
           bottom: "300px",
           width: "2%",
         }}

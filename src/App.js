@@ -9,6 +9,7 @@ import Account from "./Pages/Account";
 import Tvs from "./Pages/Tvs";
 import View from "./Pages/View";
 import AddBankAccount from "./Pages/AddBankAccount";
+import BuyNow from "./Pages/BuyNow";
 
 function App() {
   let component;
@@ -42,6 +43,9 @@ function App() {
       break;
     case "/AddBankAccount":
       component = <AddBankAccount />;
+      break;
+    case "/BuyNow":
+      component = <BuyNow />;
       break;
     default:
       console.log("Sucess");

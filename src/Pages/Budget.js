@@ -3,21 +3,7 @@ import { Button, TextField } from "@mui/material";
 import Axios from "axios";
 
 function AddTransaction() {
-  const [amount, setAmount] = useState(0);
-  const [description, setDescription] = useState("");
-  const [username, setUsername] = useState("");
-
   const [transactionList, setTransactionList] = useState([]);
-
-  const addTransactions = () => {
-    Axios.post("http://localhost:4000/create", {
-      amount: amount,
-      description: description,
-      username: username,
-    }).then(() => {
-      console.log("success");
-    });
-  };
 
   const getTransactions = () => {
     Axios.get("http://localhost:4000/transactions").then((response) => {
@@ -37,63 +23,6 @@ function AddTransaction() {
 
   return (
     <div className="App">
-      <TextField
-        type="number"
-        sx={{
-          position: "fixed",
-          top: "17.5rem",
-          left: "2.2rem",
-          borderRadius: "10px",
-          backgroundColor: "white",
-          width: "500px",
-        }}
-        label="Enter Your Amount"
-        onChange={(event) => {
-          setAmount(event.target.value);
-        }}
-      />
-      <TextField
-        label="Enter your description"
-        sx={{
-          position: "fixed",
-          top: "25.5rem",
-          left: "2.2rem",
-          borderRadius: "10px",
-          backgroundColor: "white",
-          width: "500px",
-        }}
-        onChange={(event) => {
-          setDescription(event.target.value);
-        }}
-      ></TextField>
-      <TextField
-        sx={{
-          position: "fixed",
-          top: "10.5rem",
-          left: "2.2rem",
-          borderRadius: "10px",
-          backgroundColor: "white",
-          width: "500px",
-        }}
-        label="Enter Your Name"
-        onChange={(event) => {
-          setUsername(event.target.value);
-        }}
-      />
-      <Button
-        variant="contained"
-        onClick={addTransactions}
-        sx={{
-          backgroundColor: "#66FCF1",
-          position: "fixed",
-          color: "black",
-          left: "9rem",
-          top: "500px",
-          width: "250px",
-        }}
-      >
-        Add Transaction
-      </Button>
       <Button
         variant="contained"
         onClick={getTransactions}

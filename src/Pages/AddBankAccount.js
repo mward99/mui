@@ -35,26 +35,7 @@ function AddBankAccount() {
         multiline
         sx={{
           position: "fixed",
-          top: "30.5rem",
-          left: "32.2rem",
-          width: "500px",
-          backgroundColor: "white",
-          borderRadius: "10px",
-          color: "white",
-        }}
-      />
-
-      <TextField
-        id="outlined-textarea"
-        label="Enter your ID"
-        onChange={(event) => {
-          setUser_User_ID(event.target.value);
-        }}
-        placeholder=""
-        multiline
-        sx={{
-          position: "fixed",
-          bottom: "15.5rem",
+          top: "15.5rem",
           left: "32.2rem",
           width: "500px",
           backgroundColor: "white",
@@ -133,7 +114,7 @@ function AddBankAccount() {
       />
       <Button
         id="SignUp"
-        href="/Signup"
+        href="/Purchase"
         variant="contained"
         onClick={addBankAccount}
         sx={{

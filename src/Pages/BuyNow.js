@@ -1,9 +1,9 @@
 import { Button } from "@mui/material";
 
-export default function View() {
+export default function BuyNow() {
   return (
     <div className="App">
-      <h2>Your Order</h2>
+      <h2>Your order has been purchased!</h2>
       <div className="ViewOrder">
         <tbody id="TransactionTable">
           <tr>
@@ -23,7 +23,7 @@ export default function View() {
       <img src="./Images/pic.png"></img>
 
       <Button
-        href="/BuyNow"
+        href="/Purchase"
         id="StartBudgeting"
         variant="contained"
         sx={{
@@ -35,7 +35,7 @@ export default function View() {
           width: "500px",
         }}
       >
-        Buy Now
+        Coninue Shopping
       </Button>
     </div>
   );

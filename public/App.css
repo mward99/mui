@@ -73,6 +73,27 @@ ul {
     width: 15%;
     height: 25%;
 }
+#Tv4 {
+  position: fixed;
+  left: 20.5rem;
+  bottom: 4.5rem;
+  width: 15%;
+  height: 25%;
+}
+#Tv5 {
+  position: fixed;
+  left: 40.5rem;
+  bottom: 4.5rem;
+  width: 15%;
+  height: 25%;
+}
+#Tv6 {
+  position: fixed;
+  left: 40.5rem;
+  bottom: 350px;
+  width: 15%;
+  height: 25%;
+}
 
 h2{
   position: fixed;
@@ -93,6 +114,7 @@ h2{
     position: fixed;
   left: 3.5rem;
 }
+
 
 
 p{

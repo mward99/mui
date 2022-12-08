@@ -18,34 +18,30 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/signup", (req, res) => {
-  const User_Type = req.body.User_Type;
+  const User_Password = req.body.User_Password;
   const User_Username = req.body.User_Username;
   const User_FName = req.body.User_FName;
   const User_LName = req.body.User_LName;
   const User_Email = req.body.User_Email;
-  const User_Password = req.body.User_Password;
+  const User_Street_Address = req.body.User_Street_Address;
+  const User_City = req.body.User_City;
   const User_Zip = req.body.User_Zip;
   const User_State = req.body.User_State;
-  const User_City = req.body.User_City;
-  const User_Street_Address = req.body.User_Street_Address;
-  const Bank_Account_Bank_Account_Number = -1;
-  const Bank_Account_Account_Routing_Number = -1;
+  const User_Type = req.body.User_Type;
 
   db.query(
-    "INSERT INTO User (User_Type,User_Username,User_FName,User_LName,User_Email,User_Password,User_Zip,User_State,User_City,User_Street_Address,Bank_Account_Bank_Account_Number,Bank_Account_Account_Routing_Number) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+    "INSERT INTO User (User_Password,User_Username,User_FName,User_LName,User_Email,User_Street_Address,User_City,User_Zip,User_State,User_Type) VALUES (?,?,?,?,?,?,?,?,?,?)",
     [
-      User_Type,
+      User_Password,
+      User_Username,
       User_FName,
       User_LName,
-      User_Username,
       User_Email,
-      User_Password,
+      User_Street_Address,
+      User_City,
       User_Zip,
       User_State,
-      User_City,
-      User_Street_Address,
-      Bank_Account_Bank_Account_Number,
-      Bank_Account_Account_Routing_Number,
+      User_Type,
     ],
     (err, result) => {
       if (err) {

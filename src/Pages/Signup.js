@@ -151,8 +151,32 @@ function SignUp() {
           backgroundColor: "white",
           width: "500px",
         }}
-        s
       />
+      {/* <h3 id="BorS">Select Buyer or Seller</h3>
+      <FormGroup sx={{ position: "fixed", top: "11rem", right: "25.5rem" }}>
+        <FormControlLabel
+          control={
+            <Checkbox
+              onChange={(event) => {
+                setUserType(event.target.value);
+              }}
+            />
+          }
+          label="Buyer"
+        />
+      </FormGroup>
+      <FormGroup sx={{ position: "fixed", top: "11rem", right: "20.5rem" }}>
+        <FormControlLabel
+          control={
+            <Checkbox
+              onChange={(event) => {
+                setUserType(event.target.value);
+              }}
+            />
+          }
+          label="Seller"
+        />
+      </FormGroup> */}
 
       <Select
         onChange={(event) => {
@@ -243,7 +267,7 @@ function SignUp() {
       />
       <Button
         id="SignUp"
-        href="/Purchase"
+        href="/Account"
         variant="contained"
         onClick={addInfo}
         sx={{

@@ -2,9 +2,10 @@ export default function Purchae() {
   return (
     <div className="App">
       <img src="./Images/pic.png"></img>
+
       <h2>Select Brand</h2>
       <p>
-        You are able to adjust your budget and purchase items on the platform. s
+        You are able to adjust your budget and purchase items on the platform.
       </p>
 
       <nav>
