@@ -1,10 +1,52 @@
 :root{
     background-image: linear-gradient(to right, #5d5c62, #C5C6C7);
 }
-body {
-  background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
-  
+
+img {
+
+    position: fixed;
+    right: 1.5rem;
+    bottom: 4.5rem;
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+
 }
+tr{
+    position: fixed;
+    top: 10.5rem;
+    left: 4.5rem;
+    font-size: x-large;
+    color: white;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 3.7rem;
+    left: -0.0rem;
+    width: 2000px;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
 
 #App {
   font-family: sans-serif;
@@ -13,26 +55,77 @@ body {
   height: 100vh;
 }
 
+#Tv1{
+    position: fixed;
+    left: 1.5rem;
+    width: 15%;
+}
+#Tv2 {
+    position: fixed;
+    left: 1.5rem;
+    bottom: 350px;
+    width: 15%;
+}
+#Tv3 {
+    position: fixed;
+    left: 20.5rem;
+    bottom: 350px;
+    width: 15%;
+    height: 25%;
+}
+#Tv4 {
+  position: fixed;
+  left: 20.5rem;
+  bottom: 4.5rem;
+  width: 15%;
+  height: 25%;
+}
+#Tv5 {
+  position: fixed;
+  left: 40.5rem;
+  bottom: 4.5rem;
+  width: 15%;
+  height: 25%;
+}
+#Tv6 {
+  position: fixed;
+  left: 40.5rem;
+  bottom: 350px;
+  width: 15%;
+  height: 25%;
+}
+
 h2{
   position: fixed;
   left: 3.5rem;
-  top: 100px;
-  color: #482673;
+  top: 80px;
+  color: #66FCF1;
   border-radius: 8px;
   width: 500px;
+  font-size: xx-large;
+  text-shadow: 2px 2px 0px black;
 }
 #Chart{
   position:fixed;
   top:500px;
 }
 
+#Cart{
+    position: fixed;
+  left: 3.5rem;
+}
+
+
 
 p{
   position: fixed;
   left: 3.5rem;
+  color: white;
   top: 150px;
   border-radius: 8px;
-  width: 500px;
+  width: 800px;
+  font-size: x-large;
+  text-shadow: 1px 1px 0px black;
 }
 #Secondheader {
   position: fixed;
@@ -52,28 +145,26 @@ p{
 
 
 
-#page-wrap {
+/* #page-wrap {
   text-align: center;
-
   /* Prevent sidebar from showing a scrollbar on page */
-  overflow: auto;
-}
+  /* overflow: auto; */
+
 
 /* Individual item */
-.bm-item {
+/* .bm-item {
   display: inline-block;
-
   /* Our sidebar item styling */
-  text-decoration: none;
+  /* text-decoration: none;
   margin-bottom: 10px;
   color: #d1d1d1;
   transition: color 0.2s;
-}
+} */
 
 /* Change color on hover */
-.bm-item:hover {
+/* .bm-item:hover {
   color: white;
-}
+}  */
 
 
 
@@ -93,7 +184,7 @@ p{
 /* The rest copied directly from react-burger-menu docs */
 
 /* Position and sizing of burger button */
-.bm-burger-button {
+/* .bm-burger-button {
   position: fixed;
   width: 36px;
   height: 30px;
@@ -107,25 +198,24 @@ p{
     left: 26px;
     bottom: 300px;
 }
-
 /* General sidebar styles */
-.bm-menu {
+/* .bm-menu {
   background: #1F2833;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
-}
+} */
 
 /* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
+/* .bm-morph-shape {
   fill: #373a47;
-}
+} */
 
 /* Wrapper for item list */
-.bm-item-list {
+/* .bm-item-list {
   color: #b8b7ad;
-}
+} */
 
 /* Styling of overlay */
-.bm-overlay {
+/* .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
-}
+} */ 

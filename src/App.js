@@ -5,6 +5,11 @@ import Purchase from "./Pages/Purchase";
 import Sell from "./Pages/Sell";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
+import Account from "./Pages/Account";
+import Tvs from "./Pages/Tvs";
+import View from "./Pages/View";
+import AddBankAccount from "./Pages/AddBankAccount";
+import BuyNow from "./Pages/BuyNow";
 
 function App() {
   let component;
@@ -27,8 +32,23 @@ function App() {
     case "/Signup":
       component = <Signup />;
       break;
+    case "/Account":
+      component = <Account />;
+      break;
+    case "/Tvs":
+      component = <Tvs />;
+      break;
+    case "/View":
+      component = <View />;
+      break;
+    case "/AddBankAccount":
+      component = <AddBankAccount />;
+      break;
+    case "/BuyNow":
+      component = <BuyNow />;
+      break;
     default:
-      console.log("Opps there is an error");
+      console.log("Sucess");
   }
   return (
     <>
