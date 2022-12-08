@@ -3,22 +3,28 @@ import { Button } from "@mui/material";
 export default function Sell() {
   return (
     <div className="App">
-      <h2>App Name</h2>
-      <p>Test</p>
-      <h2 id="Secondheader">What you will get with UBudget</h2>
-      <p id="Secondp">Test</p>
+      <h2
+      style={{
+        position: "fixed",
+        left: "45.2rem",
+        top: "5.7rem",
+        width: "300px",
+        fontSize: "large",
+        }}>
+          List an item
+      </h2>
       <Button
-        href="/AddTransaction"
-        id="StartBudgeting"
+        href=""
+        id="PostListing"
         variant="contained"
         sx={{
           position: "fixed",
-          left: "3.5rem",
+          left: "32.5rem",
           top: "600px",
           width: "500px",
         }}
       >
-        START BUDGETING
+        POST LISTING
       </Button>
     </div>
   );
