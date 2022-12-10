@@ -5,7 +5,6 @@ import React, { useState } from "react";
 function AddBankAccount() {
   const [Bank_Account_Number, setBank_Account_Number] = useState(0);
   const [Account_Routing_Number, setAccount_Routing_Number] = useState(0);
-  const [User_User_ID, setUser_User_ID] = useState(0);
   const [Account_Balance, setAccount_Balance] = useState(0);
   const [Account_Nickname, setAccount_Nickname] = useState("");
   const [Account_Type, setAccount_Type] = useState("");
@@ -14,7 +13,6 @@ function AddBankAccount() {
     Axios.post("http://localhost:4000/CreateBankAccount", {
       Bank_Account_Number: Bank_Account_Number,
       Account_Routing_Number: Account_Routing_Number,
-      User_User_ID: User_User_ID,
       Account_Balance: Account_Balance,
       Account_Nickname: Account_Nickname,
       Account_Type: Account_Type,

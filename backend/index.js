@@ -81,6 +81,42 @@ app.post("/CreateBankAccount", (req, res) => {
   );
 });
 
+app.get("/item", (req, res) => {
+  db.query("SELECT * FROM Bank_Shopper.Item LIMIT 1", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+app.get("/purchase", (req, res) => {
+  db.query("SELECT * FROM Bank_Shopper.Purchase LIMIT 1", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
+app.post("/shipping", (req, res) => {
+  const Purchase_Date = req.body.Purchase_Date;
+  const Item_Item_ID = req.body.Item_Item_ID;
+  const Tracking_Number = req.body.Tracking_Number;
+  db.query(
+    "INSERT INTO Bank_Shopper.Purchase (Purchase_Date, Item_Item_ID, Tracking_Number) VALUES (now(), (SELECT Item_ID FROM Bank_Shopper.Item WHERE Item_Price ='250'),(SELECT RAND()*(200000-100000)))",
+    [Purchase_Date, Item_Item_ID, Tracking_Number],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
 const PORT = process.env.PORT || 4000; // backend routing port
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);

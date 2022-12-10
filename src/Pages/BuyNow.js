@@ -1,26 +1,37 @@
 import { Button } from "@mui/material";
+import React, { useState } from "react";
+import Axios from "axios";
 
-export default function BuyNow() {
+function BuyNow() {
+  const [TrackingInfo, setTrackingInfo] = useState([]);
+  const [Tracking_Number] = useState(0);
+  const [Purchase_Date] = useState(0);
+
+  const getTracking = () => {
+    Axios.get("http://localhost:4000/purchase", {
+      Tracking_Number: Tracking_Number,
+      Purchase_Date: Purchase_Date,
+    }).then((response) => {
+      setTrackingInfo(response.data);
+    });
+  };
+  window.onload = getTracking;
+
   return (
     <div className="App">
-      <h2>Your order has been purchased!</h2>
+      <h2>Your order has been completed!</h2>
       <div className="ViewOrder">
         <tbody id="TransactionTable">
-          <tr>
-            <th>Name:</th>
-            <br></br>
-            <th>Amount:</th>
-            <br></br>
-            <th>Ship to:</th>
-            <br></br>
-            <th>Tax:</th>
-            <br></br>
-            <th>Total:</th>
-          </tr>
+          {TrackingInfo.map((val, key) => (
+            <tr>
+              <th>Tracking Number: {val.Tracking_Number}</th>
+              <br></br>
+              <th>Date of Purchase: {val.Purchase_Date}</th>
+              <br></br>
+            </tr>
+          ))}
         </tbody>
       </div>
-
-      <img src="./Images/pic.png"></img>
 
       <Button
         href="/Purchase"
@@ -35,8 +46,9 @@ export default function BuyNow() {
           width: "500px",
         }}
       >
-        Coninue Shopping
+        Continue Shopping
       </Button>
     </div>
   );
 }
+export default BuyNow;

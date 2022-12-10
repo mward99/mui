@@ -93,6 +93,7 @@ export default function Tvs() {
       />
       <Button
         href="/View"
+        onClick="refreshPage()"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",
