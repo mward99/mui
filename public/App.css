@@ -12,6 +12,15 @@ img {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
 
 }
+
+table, td {
+  border: 1px solid;
+  width: 300px;
+  padding: 10px;
+  color: white;
+  background-color: #2E3B55;
+}
+
 tr{
     position: fixed;
     top: 10.5rem;
@@ -114,6 +123,7 @@ h2{
     position: fixed;
   left: 3.5rem;
 }
+
 
 
 

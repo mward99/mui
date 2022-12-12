@@ -4,20 +4,21 @@ import Axios from "axios";
 
 function AddTransaction() {
   const [transactionList, setTransactionList] = useState([]);
+  const [Bank_Account_Bank_Account_Number] = useState(0);
+  const [Bank_Account_Account_Routing_Number] = useState(0);
+  const [Bank_Account_User_User_ID] = useState(0);
+  const [Transaction_Amount] = useState(0);
+  const [Transaction_Description] = useState("");
 
   const getTransactions = () => {
-    Axios.get("http://localhost:4000/transactions").then((response) => {
+    Axios.get("http://localhost:4000/transaction", {
+      Bank_Account_Bank_Account_Number: Bank_Account_Bank_Account_Number,
+      Bank_Account_Account_Routing_Number: Bank_Account_Account_Routing_Number,
+      Bank_Account_User_User_ID: Bank_Account_User_User_ID,
+      Transaction_Amount: Transaction_Amount,
+      Transaction_Description: Transaction_Description,
+    }).then((response) => {
       setTransactionList(response.data);
-    });
-  };
-
-  const deleteTransaction = (id) => {
-    Axios.delete(`http://localhost:4000/delete/${id}`).then((response) => {
-      setTransactionList(
-        transactionList.filter((val) => {
-          return val.id != id;
-        })
-      );
     });
   };
 
@@ -52,28 +53,16 @@ function AddTransaction() {
       </Button>
       return (
       <div>
-        <h2>Add your Transaction</h2>
+        <h2>View your transactions</h2>
         <tbody id="TransactionTable">
-          <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Description</th>
-            <th></th>
-          </tr>
-
           {transactionList.map((val, key) => (
             <tr key={key}>
-              <td>{val.username}</td>
-              <td>{val.amount}</td>
-              <td>{val.description}</td>
-
-              <Button
-                onClick={() => {
-                  deleteTransaction(val.id);
-                }}
-              >
-                Delete
-              </Button>
+              <td>
+                Bank Account Number: {val.Bank_Account_Bank_Account_Number}
+              </td>
+              <td>Routing Number:{val.Bank_Account_Account_Routing_Number}</td>
+              <td>Transaction Amount: {val.Transaction_Amount}</td>
+              <td>Item Purchased: {val.Transaction_Description}</td>
             </tr>
           ))}
         </tbody>

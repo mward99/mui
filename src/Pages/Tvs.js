@@ -41,28 +41,18 @@ export default function Tvs() {
         </ul>
       </nav>
 
-      <table>
-        <tr>
-          <td>
-            <img id="Tv1" src="./Images/Tv1.jpg"></img>
-          </td>
-          <td>
-            <img id="Tv2" src="./Images/TV2.jpg"></img>
-          </td>
-          <td>
-            <img id="Tv3" src="./Images/Tv3.jpg"></img>
-          </td>
-          <td>
-            <img id="Tv4" src="./Images/Tv4.jpg"></img>
-          </td>
-          <td>
-            <img id="Tv5" src="./Images/Tv5.jpg"></img>
-          </td>
-          <td>
-            <img id="Tv6" src="./Images/Tv6.jpg"></img>
-          </td>
-        </tr>
-      </table>
+      <img id="Tv1" src="./Images/Tv1.jpg"></img>
+
+      <img id="Tv2" src="./Images/TV2.jpg"></img>
+
+      <img id="Tv3" src="./Images/Tv3.jpg"></img>
+
+      <img id="Tv4" src="./Images/Tv4.jpg"></img>
+
+      <img id="Tv5" src="./Images/Tv5.jpg"></img>
+
+      <img id="Tv6" src="./Images/Tv6.jpg"></img>
+
       <TextField
         id="outlined-textarea"
         label="Search"
@@ -118,7 +108,7 @@ export default function Tvs() {
         }}
         variant="contained"
       >
-        Add to Cart
+        Save Item
       </Button>
       <Button
         href="/View"
@@ -146,7 +136,7 @@ export default function Tvs() {
         }}
         variant="contained"
       >
-        Add to Cart
+        Save Item
       </Button>
 
       <Button
@@ -173,7 +163,7 @@ export default function Tvs() {
         }}
         variant="contained"
       >
-        Add to Cart
+        Save Item
       </Button>
       <Button
         href="/View"
@@ -201,7 +191,7 @@ export default function Tvs() {
         }}
         variant="contained"
       >
-        Add to Cart
+        Save Item
       </Button>
       <Button
         href="/View"
@@ -229,7 +219,7 @@ export default function Tvs() {
         }}
         variant="contained"
       >
-        Add to Cart
+        Save Item
       </Button>
       <Button
         href="/View"
@@ -257,7 +247,7 @@ export default function Tvs() {
         }}
         variant="contained"
       >
-        Add to Cart
+        Save Item
       </Button>
       <Button
         href="/View"

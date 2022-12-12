@@ -10,6 +10,7 @@ import Tvs from "./Pages/Tvs";
 import View from "./Pages/View";
 import AddBankAccount from "./Pages/AddBankAccount";
 import BuyNow from "./Pages/BuyNow";
+import SavedItems from "./Pages/SavedItems";
 
 function App() {
   let component;
@@ -46,6 +47,9 @@ function App() {
       break;
     case "/BuyNow":
       component = <BuyNow />;
+      break;
+    case "/SavedItems":
+      component = <SavedItems />;
       break;
     default:
       console.log("Sucess");
