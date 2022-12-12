@@ -81,6 +81,51 @@ app.post("/CreateBankAccount", (req, res) => {
   );
 });
 
+app.post("/Sell", (req, res) => {
+  const Item_Name = req.body.Item_Name;
+  const Item_Description = req.body.Item_Description;
+  const Item_Price = req.body.Item_Price;
+  const Item_Listed_Date = req.body.Item_Listed_Date;
+  const Category_Category_ID = req.body.Category_Category_ID;
+  const Seller_User_User_ID = req.body.Seller_User_User_ID;
+  const Brand_Brand_ID = req.body.Brand_Brand_ID;
+
+  
+
+  db.query(
+    "INSERT INTO Item (Item_Name, Item_Description, Item_Price, Item_Listed_Date, Category_Category_ID, Seller_User_User_ID, Brand_Brand_ID) VALUES (?,?,?,?,?,?,?)",
+    [
+      Item_Name,
+      Item_Description,
+      Item_Price,
+      Item_Listed_Date,
+      Category_Category_ID,
+      Seller_User_User_ID,
+      Brand_Brand_ID
+      
+    ],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send("Values Inserted");
+      }
+    }
+  );
+});
+
+
+app.get("/Listings", (req, res) => {
+  db.query("SELECT * FROM Bank_Shopper.Item WHERE User_ID = current user", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
+
 const PORT = process.env.PORT || 4000; // backend routing port
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
