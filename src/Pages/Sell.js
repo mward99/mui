@@ -1,9 +1,9 @@
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Box } from "@mui/material";
 import React, { useState } from "react";
 import Axios from "axios";
 import Select from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
-
+import ImageUploading from 'react-images-uploading';
 
 export default function Sell() {
 
@@ -13,6 +13,8 @@ export default function Sell() {
   const [Item_Listed_Date, setItemListDate] = useState("");
   const [Category_Category_ID, setItemCategory] = useState("");
   const [Brand_Brand_ID, setItemBrand] = useState("");
+  const [images, setImages] = React.useState([]);
+  const maxNumber = 69;
 
   const createListing = () => {
     Axios.post("http://localhost:4000/Sell", {
@@ -25,6 +27,12 @@ export default function Sell() {
     }).then(()=> {
       console.log("Success");
     });
+  };
+
+  const onChange = (imageList, addUpdateIndex) => {
+    // data for submit
+    console.log(imageList, addUpdateIndex);
+    setImages(imageList);
   };
 
   return (
@@ -214,6 +222,47 @@ export default function Sell() {
         <Option value="Google">Google</Option>
       </Select>
 
+      <div className="Sell">
+      <ImageUploading
+        multiple
+        value={images}
+        onChange={onChange}
+        maxNumber={maxNumber}
+        dataURLKey="data_url"
+      >
+        {({
+          imageList,
+          onImageUpload,
+          onImageRemoveAll,
+          onImageUpdate,
+          onImageRemove,
+          isDragging,
+          dragProps,
+        }) => (
+          // write your building UI
+          <div className="upload__image-wrapper">
+            <button
+              style={isDragging ? { color: 'red' } : undefined}
+              onClick={onImageUpload}
+              {...dragProps}
+            >
+              Click or Drop here
+            </button>
+            &nbsp;
+            <button onClick={onImageRemoveAll}>Remove all images</button>
+            {imageList.map((image, index) => (
+              <div key={index} className="image-item">
+                <img src={image['data_url']} alt="" width="100" />
+                <div className="image-item__btn-wrapper">
+                  <button onClick={() => onImageUpdate(index)}>Update</button>
+                  <button onClick={() => onImageRemove(index)}>Remove</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </ImageUploading>
+    </div>
 
       <Button
         href="/Listings"

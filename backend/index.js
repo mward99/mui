@@ -116,7 +116,7 @@ app.post("/Sell", (req, res) => {
 
 
 app.get("/Listings", (req, res) => {
-  db.query("SELECT * FROM Bank_Shopper.Item WHERE User_ID = current user", (err, result) => {
+  db.query("SELECT * FROM Bank_Shopper.Item", (err, result) => {
     if (err) {
       console.log(err);
     } else {
@@ -124,6 +124,9 @@ app.get("/Listings", (req, res) => {
     }
   });
 });
+
+
+
 
 
 const PORT = process.env.PORT || 4000; // backend routing port
