@@ -267,7 +267,7 @@ function SignUp() {
       />
       <Button
         id="SignUp"
-        href="/Account"
+        href="/Purchase"
         variant="contained"
         onClick={addInfo}
         sx={{

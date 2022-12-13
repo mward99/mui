@@ -97,7 +97,7 @@ export default function Tvs() {
         View
       </Button>
       <Button
-        href="/View"
+        href="/SavedItems"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",
@@ -125,7 +125,7 @@ export default function Tvs() {
         View
       </Button>
       <Button
-        href="/View"
+        href="/SavedItems"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",
@@ -152,7 +152,7 @@ export default function Tvs() {
         View All
       </Button>
       <Button
-        href="/Signup"
+        href="/SavedItems"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",
@@ -180,7 +180,7 @@ export default function Tvs() {
         View
       </Button>
       <Button
-        href="/Signup"
+        href="/SavedItems"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",
@@ -208,7 +208,7 @@ export default function Tvs() {
         View
       </Button>
       <Button
-        href="/Signup"
+        href="/SavedItems"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",
@@ -236,7 +236,7 @@ export default function Tvs() {
         View
       </Button>
       <Button
-        href="/Signup"
+        href="/SavedItems"
         style={{
           backgroundColor: "#66FCF1",
           color: "#000000",

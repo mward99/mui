@@ -112,7 +112,7 @@ function AddBankAccount() {
       />
       <Button
         id="SignUp"
-        href="/Purchase"
+        href="/Signup"
         variant="contained"
         onClick={addBankAccount}
         sx={{
