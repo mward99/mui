@@ -112,11 +112,10 @@ app.get("/purchase", (req, res) => {
 
 app.post("/shipping", (req, res) => {
   const Purchase_Date = req.body.Purchase_Date;
-  const Item_Item_ID = req.body.Item_Item_ID;
   const Tracking_Number = req.body.Tracking_Number;
   db.query(
-    "INSERT INTO Bank_Shopper.Purchase (Purchase_Date, Item_Item_ID, Tracking_Number) VALUES (now(), (SELECT Item_ID FROM Bank_Shopper.Item WHERE Item_Price ='250'),(SELECT RAND()*(200000-100000)))",
-    [Purchase_Date, Item_Item_ID, Tracking_Number],
+    "INSERT INTO Bank_Shopper.Purchase (Purchase_Date, Tracking_Number) VALUES (now(),(SELECT RAND()*(200000-100000)))",
+    [Purchase_Date, Tracking_Number],
     (err, result) => {
       if (err) {
         console.log(err);

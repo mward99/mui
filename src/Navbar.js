@@ -28,7 +28,7 @@ function Navbar() {
             HOME
           </Button>
           <Button href="/Budget" color="inherit">
-            BUDGET
+            TRANSACTIONS
           </Button>
           <Button href="/Purchase" color="inherit">
             PURCHASE
