@@ -92,7 +92,7 @@ app.get("/item", (req, res) => {
 });
 
 app.get("/transaction", (req, res) => {
-  db.query("SELECT * FROM Bank_Shopper.Transactions LIMIT 1", (err, result) => {
+  db.query("SELECT * FROM Bank_Shopper.Transactions", (err, result) => {
     if (err) {
       console.log(err);
     } else {

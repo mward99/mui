@@ -38,19 +38,6 @@ function AddTransaction() {
       >
         Show Transaction
       </Button>
-      <Button
-        variant="contained"
-        sx={{
-          backgroundColor: "#66FCF1",
-          position: "fixed",
-          color: "black",
-          left: "77rem",
-          top: "100px",
-          width: "250px",
-        }}
-      >
-        Export
-      </Button>
       return (
       <div>
         <h2>View your transactions</h2>

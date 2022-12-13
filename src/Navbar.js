@@ -33,9 +33,7 @@ function Navbar() {
           <Button href="/Purchase" color="inherit">
             PURCHASE
           </Button>
-          <Button href="/Sell" color="inherit">
-            SELL
-          </Button>
+
           <Button href="/SavedItems" color="inherit">
             SAVED ITEMS
           </Button>
