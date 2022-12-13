@@ -11,6 +11,7 @@ import View from "./Pages/View";
 import AddBankAccount from "./Pages/AddBankAccount";
 import BuyNow from "./Pages/BuyNow";
 import SavedItems from "./Pages/SavedItems";
+import CreateBankAccount from "./Pages/CreateBankAccount";
 
 function App() {
   let component;
@@ -50,6 +51,9 @@ function App() {
       break;
     case "/SavedItems":
       component = <SavedItems />;
+      break;
+    case "/CreateBankAccount":
+      component = <CreateBankAccount />;
       break;
     default:
       console.log("Sucess");
