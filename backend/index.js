@@ -81,6 +81,21 @@ app.post("/CreateBankAccount", (req, res) => {
   );
 });
 
+app.delete("/delete/:Item_Name", (req, res) => {
+  const Item_Name = req.params.Item_Name;
+  db.query(
+    "DELETE FROM Bank_Shopper.Item WHERE Item_Name = ? LIMIT 1",
+    Item_Name,
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
 app.post("/Sell", (req, res) => {
   const Item_Name = req.body.Item_Name;
   const Item_Description = req.body.Item_Description;
@@ -89,8 +104,6 @@ app.post("/Sell", (req, res) => {
   const Category_Category_ID = req.body.Category_Category_ID;
   const Seller_User_User_ID = req.body.Seller_User_User_ID;
   const Brand_Brand_ID = req.body.Brand_Brand_ID;
-
-  
 
   db.query(
     "INSERT INTO Item (Item_Name, Item_Description, Item_Price, Item_Listed_Date, Category_Category_ID, Seller_User_User_ID, Brand_Brand_ID) VALUES (?,?,?,?,?,?,?)",
@@ -101,8 +114,7 @@ app.post("/Sell", (req, res) => {
       Item_Listed_Date,
       Category_Category_ID,
       Seller_User_User_ID,
-      Brand_Brand_ID
-      
+      Brand_Brand_ID,
     ],
     (err, result) => {
       if (err) {
@@ -114,7 +126,6 @@ app.post("/Sell", (req, res) => {
   );
 });
 
-
 app.get("/Listings", (req, res) => {
   db.query("SELECT * FROM Bank_Shopper.Item", (err, result) => {
     if (err) {
@@ -124,10 +135,6 @@ app.get("/Listings", (req, res) => {
     }
   });
 });
-
-
-
-
 
 const PORT = process.env.PORT || 4000; // backend routing port
 app.listen(PORT, () => {

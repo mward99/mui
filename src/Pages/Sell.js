@@ -3,10 +3,9 @@ import React, { useState } from "react";
 import Axios from "axios";
 import Select from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
-import ImageUploading from 'react-images-uploading';
+import ImageUploading from "react-images-uploading";
 
 export default function Sell() {
-
   const [Item_Name, setItemName] = useState("");
   const [Item_Price, setItemPrice] = useState("");
   const [Item_Description, setItemDescription] = useState("");
@@ -24,7 +23,7 @@ export default function Sell() {
       Item_Listed_Date: Item_Listed_Date,
       Category_Category_ID: Category_Category_ID,
       Brand_Brand_ID: Brand_Brand_ID,
-    }).then(()=> {
+    }).then(() => {
       console.log("Success");
     });
   };
@@ -38,14 +37,15 @@ export default function Sell() {
   return (
     <div className="App">
       <h2
-      style={{
-        position: "fixed",
-        left: "45.2rem",
-        top: "5.7rem",
-        width: "300px",
-        fontSize: "large",
-        }}>
-          List an item
+        style={{
+          position: "fixed",
+          left: "45.2rem",
+          top: "5.7rem",
+          width: "300px",
+          fontSize: "large",
+        }}
+      >
+        List an item
       </h2>
       <TextField
         id="itemName"
@@ -53,12 +53,11 @@ export default function Sell() {
         onChange={(event) => {
           setItemName(event.target.value);
           var date = new Date();
-          var dd = String(date.getDate()).padStart(2, '0');
-          var mm = String(date.getMonth() + 1).padStart(2, '0');
+          var dd = String(date.getDate()).padStart(2, "0");
+          var mm = String(date.getMonth() + 1).padStart(2, "0");
           var yyyy = date.getFullYear();
-          date = mm + '/' + dd + '/' + yyyy;
+          date = mm + "/" + dd + "/" + yyyy;
           setItemListDate(date);
-
         }}
         placeholder=""
         multiline
@@ -108,40 +107,41 @@ export default function Sell() {
           color: "white",
         }}
       />
-        <Select onChange={(event) => {
-          switch(event.target.textContent){
+      <Select
+        onChange={(event) => {
+          switch (event.target.textContent) {
             case "TV":
-              setItemCategory(1)
+              setItemCategory(1);
               break;
-              case "Console":
-              setItemCategory(2)
+            case "Console":
+              setItemCategory(2);
               break;
-              case "Phone":
-              setItemCategory(3)
+            case "Phone":
+              setItemCategory(3);
               break;
-              case "Laptop":
-              setItemCategory(4)
+            case "Laptop":
+              setItemCategory(4);
               break;
-              case "Printer":
-              setItemCategory(5)
+            case "Printer":
+              setItemCategory(5);
               break;
-              case "Headphones":
-              setItemCategory(6)
+            case "Headphones":
+              setItemCategory(6);
               break;
-              case "Charger":
-              setItemCategory(7)
+            case "Charger":
+              setItemCategory(7);
               break;
-              case "PC":
-              setItemCategory(8)
+            case "PC":
+              setItemCategory(8);
               break;
-              case "Monitor":
-              setItemCategory(9)
+            case "Monitor":
+              setItemCategory(9);
               break;
-              case "Mouse":
-              setItemCategory(10)
+            case "Mouse":
+              setItemCategory(10);
               break;
-              case "Keyboard":
-              setItemCategory(11)
+            case "Keyboard":
+              setItemCategory(11);
               break;
           }
         }}
@@ -167,39 +167,40 @@ export default function Sell() {
         <Option value="Keyboard">Keyboard</Option>
       </Select>
 
-      <Select onChange={(event) => {
-                  switch(event.target.textContent){
-                    case "Samsung":
-                      setItemBrand(1)
-                      break;
-                      case "Sony":
-                      setItemBrand(2)
-                      break;
-                      case "Microsoft":
-                      setItemBrand(3)
-                      break;
-                      case "Lenovo":
-                      setItemBrand(4)
-                      break;
-                      case "Asus":
-                      setItemBrand(5)
-                      break;
-                      case "Roku":
-                      setItemBrand(6)
-                      break;
-                      case "HP":
-                      setItemBrand(7)
-                      break;
-                      case "Apple":
-                      setItemBrand(8)
-                      break;
-                      case "LG":
-                      setItemBrand(9)
-                      break;
-                      case "Google":
-                      setItemBrand(10)
-                      break;
-                  }
+      <Select
+        onChange={(event) => {
+          switch (event.target.textContent) {
+            case "Samsung":
+              setItemBrand(1);
+              break;
+            case "Sony":
+              setItemBrand(2);
+              break;
+            case "Microsoft":
+              setItemBrand(3);
+              break;
+            case "Lenovo":
+              setItemBrand(4);
+              break;
+            case "Asus":
+              setItemBrand(5);
+              break;
+            case "Roku":
+              setItemBrand(6);
+              break;
+            case "HP":
+              setItemBrand(7);
+              break;
+            case "Apple":
+              setItemBrand(8);
+              break;
+            case "LG":
+              setItemBrand(9);
+              break;
+            case "Google":
+              setItemBrand(10);
+              break;
+          }
         }}
         sx={{
           position: "fixed",
@@ -223,46 +224,46 @@ export default function Sell() {
       </Select>
 
       <div className="Sell">
-      <ImageUploading
-        multiple
-        value={images}
-        onChange={onChange}
-        maxNumber={maxNumber}
-        dataURLKey="data_url"
-      >
-        {({
-          imageList,
-          onImageUpload,
-          onImageRemoveAll,
-          onImageUpdate,
-          onImageRemove,
-          isDragging,
-          dragProps,
-        }) => (
-          // write your building UI
-          <div className="upload__image-wrapper">
-            <button
-              style={isDragging ? { color: 'red' } : undefined}
-              onClick={onImageUpload}
-              {...dragProps}
-            >
-              Click or Drop here
-            </button>
-            &nbsp;
-            <button onClick={onImageRemoveAll}>Remove all images</button>
-            {imageList.map((image, index) => (
-              <div key={index} className="image-item">
-                <img src={image['data_url']} alt="" width="100" />
-                <div className="image-item__btn-wrapper">
-                  <button onClick={() => onImageUpdate(index)}>Update</button>
-                  <button onClick={() => onImageRemove(index)}>Remove</button>
+        <ImageUploading
+          multiple
+          value={images}
+          onChange={onChange}
+          maxNumber={maxNumber}
+          dataURLKey="data_url"
+        >
+          {({
+            imageList,
+            onImageUpload,
+            onImageRemoveAll,
+            onImageUpdate,
+            onImageRemove,
+            isDragging,
+            dragProps,
+          }) => (
+            // write your building UI
+            <div className="upload__image-wrapper">
+              <button
+                style={isDragging ? { color: "red" } : undefined}
+                onClick={onImageUpload}
+                {...dragProps}
+              >
+                Click or Drop here
+              </button>
+              &nbsp;
+              <button onClick={onImageRemoveAll}>Remove all images</button>
+              {imageList.map((image, index) => (
+                <div key={index} className="image-item">
+                  <img src={image["data_url"]} alt="" width="100" />
+                  <div className="image-item__btn-wrapper">
+                    <button onClick={() => onImageUpdate(index)}>Update</button>
+                    <button onClick={() => onImageRemove(index)}>Remove</button>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </ImageUploading>
-    </div>
+              ))}
+            </div>
+          )}
+        </ImageUploading>
+      </div>
 
       <Button
         href="/Listings"

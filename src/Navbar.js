@@ -27,11 +27,8 @@ function Navbar() {
           <Button href="/Home" color="inherit">
             HOME
           </Button>
-          <Button href="/Budget" color="inherit">
-            BUDGET
-          </Button>
-          <Button href="/Purchase" color="inherit">
-            PURCHASE
+          <Button href="/Listings" color="inherit">
+            Listings
           </Button>
           <Button href="/Sell" color="inherit">
             SELL
