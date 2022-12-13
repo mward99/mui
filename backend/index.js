@@ -81,7 +81,121 @@ app.post("/CreateBankAccount", (req, res) => {
   );
 });
 
+app.post("/getBankAccountInfo", (req, res) => {
+  const Username = req.body.Username;
+  const Account_Number = req.body.Account_Number;
+  db.query(
+    "select Bank_Account_Number, Account_Routing_Number, Account_Balance, Account_Nickname, Account_Type, User_Username, User_User_ID from Bank_Account JOIN User on User_ID = User_User_ID where User_Username like ? and Bank_Account_Number like ?;",
+    [
+      Username,
+      Account_Number,
+    ],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+app.post("/getTransactions", (req, res) => {
+  const User_ID = req.body.User_ID;
+  const accNum = req.body.accNum;
+  db.query(
+    "select Transaction_Num, Transaction_Amount, Transaction_Description from Transactions where Bank_Account_User_User_ID = ? and Bank_Account_Bank_Account_Number = ?;",
+    [
+      User_ID,
+      accNum,
+    ],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+app.post("/getUserID", (req, res) => {
+  const Username = req.body.Username;
+  db.query(
+    "select User_ID from User where User_Username = ?;",
+    [
+      Username,
+    ],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+app.post("/makeDeposit", (req, res) => {
+  const User_ID = req.body.User_ID;
+  const Account_Number = req.body.Account_Number;
+  const Amount = req.body.Amount;
+  const Routing_Number = req.body.Routing_Number;
+
+  db.query(
+    "update Bank_Account set Account_Balance = Account_Balance + ? where Bank_Account_Number = ? and User_User_ID = ?;",
+    [
+      Amount,
+      Account_Number,
+      User_ID,
+    ],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+app.post("/makeDepositTransaction", (req, res) => {
+  const User_ID = req.body.User_ID;
+  const Account_Number = req.body.Account_Number;
+  const Amount = req.body.Amount;
+  const Routing_Number = req.body.Routing_Number;
+
+  db.query(
+    "INSERT INTO Bank_Shopper.Transactions (Bank_Account_Bank_Account_Number, Bank_Account_Account_Routing_Number, Bank_Account_User_User_ID, Transaction_Amount, Transaction_Description) Values (?, ?, ?, ?, 'Deposit/Withdraw');",
+    [
+      Account_Number,
+      Routing_Number,
+      User_ID,
+      Amount,
+    ],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+app.get("/transactions", (req, res) => {
+  db.query("SELECT * FROM Transactions", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
 const PORT = process.env.PORT || 4000; // backend routing port
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+
+

@@ -36,6 +36,9 @@ function Navbar() {
           <Button href="/Sell" color="inherit">
             SELL
           </Button>
+          <Button href="/Bank" color="inherit">
+            BANK
+          </Button>
           <Button
             href="/Signup"
             style={{

@@ -1,100 +1,119 @@
+td, th {
+  border: 1px solid white;
+  padding: 1.5rem;
+  text-align: center;
+
+}
+
+table {
+  border-collapse: collapse;
+  position: fixed;
+  top: 200px;
+  left: 100px;
+  width: 1000px;
+  background-color: lightblue;
+  color: black;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eeeeee;
+}
+td, th {
+  border: 1px solid #777;
+}
+caption {
+  font-size: 0.8rem;
+}
 :root{
-    background-image: linear-gradient(to right, #5d5c62, #C5C6C7);
+  background-image: linear-gradient(to right, #5d5c62, #C5C6C7);
+}
+
+#TransactionTable{
+  position: fixed;
+  right: 1.5rem;
+  bottom: 4.5rem;
+}
+
+#Test{
+  background: #00000000;
+  position: fixed;
+  top: 10.5rem;
+  left: 4.5rem;
+  font-size: x-large;
+  color: white;
 }
 
 img {
 
-    position: fixed;
-    right: 1.5rem;
-    bottom: 4.5rem;
-    width: 40%;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+  position: fixed;
+  right: 1.5rem;
+  bottom: 4.5rem;
+  width: 40%;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
 
-}
-tr{
-    position: fixed;
-    top: 10.5rem;
-    left: 4.5rem;
-    font-size: x-large;
-    color: white;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 3.7rem;
-    left: -0.0rem;
-    width: 2000px;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #111;
-  }
-
-#App {
-  font-family: sans-serif;
-
-  /* Give app full page to work with */
-  height: 100vh;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 3.7rem;
+  left: -0.0rem;
+  width: 2000px;
+}
+li {
+  float: left;
 }
 
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 #Tv1{
-    position: fixed;
-    left: 1.5rem;
-    width: 15%;
+  position: fixed;
+  left: 1.5rem;
+  width: 15%;
 }
 #Tv2 {
-    position: fixed;
-    left: 1.5rem;
-    bottom: 350px;
-    width: 15%;
+  position: fixed;
+  left: 1.5rem;
+  bottom: 350px;
+  width: 15%;
 }
 #Tv3 {
-    position: fixed;
-    left: 20.5rem;
-    bottom: 350px;
-    width: 15%;
-    height: 25%;
-}
-#Tv4 {
   position: fixed;
   left: 20.5rem;
-  bottom: 4.5rem;
-  width: 15%;
-  height: 25%;
-}
-#Tv5 {
-  position: fixed;
-  left: 40.5rem;
-  bottom: 4.5rem;
-  width: 15%;
-  height: 25%;
-}
-#Tv6 {
-  position: fixed;
-  left: 40.5rem;
   bottom: 350px;
   width: 15%;
   height: 25%;
 }
-
+#Tv4 {
+position: fixed;
+left: 20.5rem;
+bottom: 4.5rem;
+width: 15%;
+height: 25%;
+}
+#Tv5 {
+position: fixed;
+left: 40.5rem;
+bottom: 4.5rem;
+width: 15%;
+height: 25%;
+}
+#Tv6 {
+position: fixed;
+left: 40.5rem;
+bottom: 350px;
+width: 15%;
+height: 25%;
+}
 h2{
   position: fixed;
   left: 3.5rem;
@@ -105,117 +124,5 @@ h2{
   font-size: xx-large;
   text-shadow: 2px 2px 0px black;
 }
-#Chart{
-  position:fixed;
-  top:500px;
-}
-
-#Cart{
-    position: fixed;
-  left: 3.5rem;
-}
 
 
-
-p{
-  position: fixed;
-  left: 3.5rem;
-  color: white;
-  top: 150px;
-  border-radius: 8px;
-  width: 800px;
-  font-size: x-large;
-  text-shadow: 1px 1px 0px black;
-}
-#Secondheader {
-  position: fixed;
-  left: 3.5rem;
-  top: 350px;
-  border-radius: 8px;
-  width: 500px;
-}
-#Secondp{
-  position: fixed;
-  left: 3.5rem;
-  top: 390px;
-  border-radius: 8px;
-  width: 500px;
-}
-
-
-
-
-/* #page-wrap {
-  text-align: center;
-  /* Prevent sidebar from showing a scrollbar on page */
-  /* overflow: auto; */
-
-
-/* Individual item */
-/* .bm-item {
-  display: inline-block;
-  /* Our sidebar item styling */
-  /* text-decoration: none;
-  margin-bottom: 10px;
-  color: #d1d1d1;
-  transition: color 0.2s;
-} */
-
-/* Change color on hover */
-/* .bm-item:hover {
-  color: white;
-}  */
-
-
-
-#AddTransaction {
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
-}
-
-#StartBudgeting {
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
-}
-
-#TransactionTable {
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
-}
-
-
-/* The rest copied directly from react-burger-menu docs */
-
-/* Position and sizing of burger button */
-/* .bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 26px;
-  top: 16px;
-}
-.LowerBar {
-    position: sticky;
-    width: 36px;
-    height: 30px;
-    left: 26px;
-    bottom: 300px;
-}
-/* General sidebar styles */
-/* .bm-menu {
-  background: #1F2833;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-} */
-
-/* Morph shape necessary with bubble or elastic */
-/* .bm-morph-shape {
-  fill: #373a47;
-} */
-
-/* Wrapper for item list */
-/* .bm-item-list {
-  color: #b8b7ad;
-} */
-
-/* Styling of overlay */
-/* .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-} */ 
