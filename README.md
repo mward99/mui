@@ -1,3 +1,16 @@
+Below are some information about react. You would use the npm start in order to launch the app. 
+You will also want to change directories to ./backend and type, in another terminal, node index.js to start running the server. 
+
+The main parts of the files are in src and backend. 
+
+src contains the pages, which is just all of the pages of the app.
+The App.js is what navigates the sites and the Navbar.js just formats the bar at the top of the app.
+
+Within backend, there is an index.js that houses the queries and is also what connects to the database. 
+
+If you wanted to actually access the database, you would have to have your public IP added to the allowed list within the Google Cloud,
+then you would be able to login using the information within the index.js that was just mentioned.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
