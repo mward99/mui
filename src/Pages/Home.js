@@ -3,9 +3,10 @@ import { Button } from "@mui/material";
 export default function Home() {
   return (
     <div className="App">
-      <h2>Bank Shopper</h2>
+      <h2> Bank Shopper</h2>
       <img src="./Images/pic.png"></img>
       <p>
+        Test
         The goal of the application is to combine banking and ecommerce into one
         platform for individual sellers and buyers. This application will
         provide a banking software where users create a bank account and are
